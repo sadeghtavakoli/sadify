@@ -147,9 +147,14 @@ a {
   height: 50px;
   padding: 1rem;
 }
+
 .icon-primary {
   fill: var(--color-primary);
 }
+.icon-white {
+  fill: #fff;
+}
+
 .icon-container {
   display: inline-flex;
   justify-content: center;
@@ -159,7 +164,9 @@ a {
   border-radius: 100%;
   background-color: #f3f9f8;
 }
-
+.icon-container--accent {
+  background-color: var(--color-accent);
+}
 /* Buttons */
 .btn {
   padding: 1.8rem;
@@ -244,14 +251,9 @@ a {
   border-radius: 7px;
   box-shadow: 0 0 20px 10px var(--color-border);
   margin: 5rem;
-  transition: transform 0.5s;
   overflow: hidden;
 }
 
-.card:hover {
-  transform: scale(1.15);
-  color: white;
-}
 .card__header,
 .card__body {
   padding: 2rem 3rem;
@@ -271,7 +273,13 @@ a {
   background: #02cdf1;
 }
 /* plans */
-
+.plan {
+  transition: transform 0.5s;
+}
+.plan:hover {
+  transform: scale(1.15);
+  color: white;
+}
 .plan__name {
   color: white;
   font-size: 2rem;
@@ -389,5 +397,29 @@ a {
 @media screen and (min-width: 1024px) {
   .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Testimonial */
+.testimonial {
+  padding: 3rem;
+}
+.testimonial__image {
+  position: relative;
+}
+
+.testimonial__image > img {
+  /* you should set width in percentage so image bacome responsive */
+  width: 100%;
+}
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -32px;
+}
+@media screen and (min-width: 768px) {
+  .testimonial .quote,
+  .testimonial .quote__author {
+    font-size: 2.5rem;
   }
 }
