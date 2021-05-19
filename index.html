@@ -16,18 +16,26 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Sadify</title>
   </head>
-  <body>
-    <div class="callout callout--primary">
-      <div class="grid grid--1x2">
-        <div class="callout__content">
-          <h2 class="callout__title">Ready to get Started??</h2>
-          <p class="callout__text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae
-            debitis culpa officia enim temporibus delectus?
-          </p>
-        </div>
-        <a href="#" class="btn btn--secondary btn--stretched">Get started</a>
+  <body style="background-color: #000; padding: 2rem">
+    <div class="collapsible">
+      <header class="collapsible__header">
+        <h2 class="collapsible__heading">Item 1</h2>
+        <svg
+          class="icon icon--white collapsible__chevron"
+          id="collapsible__btn"
+        >
+          <use xlink:href="images/sprite.svg#chevron"></use>
+        </svg>
+      </header>
+      <div class="collapsible__content">
+        <ul class="list">
+          <li class="list__item">sadegh</li>
+          <li class="list__item">sina</li>
+          <li class="list__item">reza</li>
+          <li class="list__item">sajad</li>
+        </ul>
       </div>
     </div>
+    <script src="js/main.js"></script>
   </body>
 </html>

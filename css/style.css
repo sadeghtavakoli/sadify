@@ -147,11 +147,15 @@ a {
   height: 50px;
   padding: 1rem;
 }
+.icon--large {
+  width: 60px;
+  height: 60px;
+}
 
-.icon-primary {
+.icon--primary {
   fill: var(--color-primary);
 }
-.icon-white {
+.icon--white {
   fill: #fff;
 }
 
@@ -464,4 +468,41 @@ a {
   .callout__content {
     text-align: left;
   }
+}
+
+/* Collapsible */
+.collapsible {
+  padding: 2rem 2rem;
+}
+
+.collapsible__header {
+  display: flex;
+  justify-content: space-between;
+}
+.collapsible__heading {
+  color: white;
+  margin: 0;
+  font-size: 3rem;
+}
+.collapsible__content {
+  /* you cant add transition to display property so instead use max-hight */
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.collapsible .list {
+  margin-top: 1rem;
+}
+.collapsible__chevron {
+  transition: transform 0.3s;
+  transform: rotate(-90deg);
+}
+
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(0deg);
+}
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
 }
