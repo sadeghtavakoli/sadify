@@ -143,13 +143,8 @@ a {
 /* icons */
 
 .icon {
-  width: 50px;
-  height: 50px;
-  padding: 1rem;
-}
-.icon--large {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
 }
 
 .icon--primary {
@@ -157,6 +152,9 @@ a {
 }
 .icon--white {
   fill: #fff;
+}
+.icon--body {
+  fill: var(--color-body);
 }
 
 .icon-container {
@@ -541,3 +539,64 @@ a {
 }
 
 /* Nvaigation Bar */
+.nav {
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+}
+.nav__list {
+  width: 100%;
+  margin: 0;
+}
+.nav__item {
+  padding: 3px;
+  padding: 0.5rem 2rem;
+  border-bottom: 0.5px groove var(--color-body-darker);
+}
+.nav__item a {
+  color: var(--color-body);
+  font-size: 2rem;
+  transition: color 0.3s;
+}
+.nav__item a:hover {
+  color: white;
+}
+.nav__toggler {
+  opacity: 0.5;
+}
+.nav.collapsible--expanded .nav__toggler {
+  opacity: 1;
+  box-shadow: 0 0 0 3px #666;
+  border-radius: 5px;
+}
+.nav__brand {
+  transform: translateY(5px);
+}
+
+@media screen and (min-width: 768px) {
+  .nav__toggler {
+    display: none;
+  }
+  .nav {
+    /* to fit content */
+    width: auto;
+    flex-wrap: nowrap;
+  }
+
+  .nav .nav__list {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0px;
+    font-size: 1.6rem;
+    /* to make it visible */
+    max-height: 100vh;
+    opacity: 1;
+  }
+  .nav__item {
+    display: inline;
+    border: 0;
+  }
+}
