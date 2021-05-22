@@ -262,8 +262,7 @@ a {
 /* Cards */
 .card {
   border-radius: 7px;
-  box-shadow: 0 0 20px 10px var(--color-border);
-  margin: 5rem;
+  box-shadow: 0 0 10px 1px var(--color-border);
   overflow: hidden;
 }
 
@@ -289,10 +288,7 @@ a {
 .plan {
   transition: transform 0.5s;
 }
-.plan:hover {
-  transform: scale(1.15);
-  color: white;
-}
+
 .plan__name {
   color: white;
   font-size: 2rem;
@@ -670,5 +666,24 @@ a {
     if you want to use fr you can use minmax function like below*/
 
     grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  }
+}
+
+/* Plan Block */
+.block-plans .card {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+.block-plans.grid {
+  gap: 8rem 4rem;
+}
+.block-plans .plan--popular {
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 768px) {
+  .block-plans .plan:hover {
+    transform: scale(1.05);
+    color: white;
   }
 }
