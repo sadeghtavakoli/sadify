@@ -14,7 +14,8 @@
     <!--Css files -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
-  
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Sadify</title>
   </head>
   <body>
@@ -39,14 +40,14 @@
     <section class="block block--dark block--skewed-left hero">
       <div class="container grid grid--1x2">
         <header class="block__header hero__content">
-          <h1 class="block__heading hero__heading">Cloud Hosting for Pros</h1>
+          <h1 data-aos="zoom-in-up" class="block__heading hero__heading">Cloud Hosting for Pros</h1>
           <p class="hero__tagline">
             Deploy your website in less than 60 seconds.
           </p>
           <a class="btn btn--accent btn--stretched">Get started</a>
         </header>
 
-        <picture>
+        <picture data-aos="zoom-in-up">
           <source
             type="image/webp"
             srcset="images/banner.webp 1x, images/banner@2x.webp 2x"
@@ -60,7 +61,7 @@
       </div>
     </section>
     <!-- Domain Block -->
-    <section class="block container block-domain">
+    <section data-aos="fade-up" class="block container block-domain ">
       <header class="block__header">
         <h2 class="block__heading">Starting at $10 per month</h2>
         <p>
@@ -93,8 +94,8 @@
       </ul>
     </section>
     <!-- Plans Block -->
-    <section class="block container grid grid--1x3 block-plans">
-      <div class="plan">
+    <section data-aos="fade-up-in"  class="block container grid grid--1x3 block-plans">
+      <div  class="plan">
         <div class="card card--secondary">
           <header class="card__header">
             <h3 class="plan__name">Entry</h3>
@@ -163,7 +164,7 @@
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed,
           voluptatem.
         </p>
-        <article class="grid grid--1x2 feature">
+        <article data-aos="fade-up"  class="grid grid--1x2 feature">
           <div class="feature__content">
             <span class="icon-container">
               <svg class="icon icon--primary">
@@ -202,7 +203,7 @@
         </article>
 
         <article class="grid grid--1x2 feature">
-          <div class="feature__content">
+          <div data-aos="fade-up"  class="feature__content">
             <span class="icon-container">
               <svg class="icon icon--primary">
                 <use xlink:href="images/sprite.svg#computer"></use>
@@ -240,7 +241,7 @@
         </article>
 
         <article class="grid grid--1x2 feature">
-          <div class="feature__content">
+          <div data-aos="fade-up"  class="feature__content">
             <span class="icon-container">
               <svg class="icon icon--primary">
                 <use xlink:href="images/sprite.svg#wordpress"></use>
@@ -277,7 +278,7 @@
           </picture>
         </article>
 
-        <article class="grid grid--1x2 feature">
+        <article data-aos="fade-up"  class="grid grid--1x2 feature">
           <div class="feature__content">
             <span class="icon-container">
               <svg class="icon icon--primary">
@@ -322,7 +323,7 @@
         <h2 class="block__heading">User-friendly Control Panel</h2>
       </div>
       <div class="grid grid--1x2 container">
-        <picture class="block-showcase__picture">
+        <picture data-aos="fade-right" class="block-showcase__picture">
           <source
             type="image/webp"
             srcset="images/ipad.webp 1x, images/ipad@2x.webp 2x"
@@ -333,7 +334,7 @@
           />
           <img src="images//ipad@2x.png" alt="ipadcase image" />
         </picture>
-        <div class="block-showcase__content">
+        <div data-aos="fade-up" data-aos-anchor-placement="center-center" class="block-showcase__content">
           <ul class="list">
             <li>
               <div class="media">
@@ -391,7 +392,7 @@
       </div>
     </section>
     <!-- Testimonials block -->
-    <section class="block">
+    <section data-aos="zoom-in" class="block">
       <div class="block__header">
         <h2 class="block__heading">What our Customers are Saying</h2>
         <p>
@@ -538,6 +539,10 @@
     </footer>
     
     <script src="js/main.js"></script>
-
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
