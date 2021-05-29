@@ -185,7 +185,8 @@ a {
   text-transform: uppercase;
   border: 0;
   text-align: center;
-  padding: 2rem 4rem;
+  /* use vw so padding become responsive based on viewport width */
+  padding: 2rem 4vw;
   border-radius: 40px;
   margin: 3px;
   cursor: pointer;
@@ -258,6 +259,8 @@ a {
   border: 0;
   padding: 1.5rem 2rem;
   flex-grow: 1;
+  /* to disable browser default width : */
+  width: 0;
 }
 @media screen and (min-width: 1024px) {
   .input {
@@ -654,14 +657,20 @@ a {
 .block-domain__prices {
   font-weight: bold;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   justify-items: center;
   row-gap: 3rem;
   max-width: 700px;
   margin: 0 auto;
+  color: var(--color-headings);
 }
 
+@media screen and (min-width: 450px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 @media screen and (min-width: 768px) {
   .block-domain__prices {
     /* if you dont know number of column use auto-fit.
@@ -672,7 +681,7 @@ a {
     
     if you want to use fr you can use minmax function like below*/
 
-    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
 }
 
@@ -798,3 +807,4 @@ a {
     width: 100%;
   }
 }
+/*  */
