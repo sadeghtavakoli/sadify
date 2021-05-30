@@ -471,6 +471,10 @@ a {
   align-self: center;
 }
 @media screen and (min-width: 768px) {
+  .callout {
+    position: relative;
+    top: 4rem;
+  }
   .callout .grid--1x2 {
     grid-template-columns: 2fr auto;
   }
@@ -743,6 +747,7 @@ a {
   }
 }
 /* Tesimonials Block : Nothing to add here*/
+/* Callout component */
 
 /* Footer Block */
 .footer {
@@ -777,6 +782,7 @@ a {
 @media screen and (min-width: 768px) {
   .footer__sections {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    padding-top: 5rem;
   }
   .footer .collapsible__chevron {
     display: none;
