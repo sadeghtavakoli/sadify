@@ -1,0 +1,13 @@
+well for deploying project mosh used a new hosting service netlify.com
+its realy fantastic,its easy and you can add costum domain .
+
+first you should push project to a github repo.
+then go to the site and deploy it base on the repo(watch course its short and easy.)
+
+for updating website:
+1-commit changes
+2-push changes to github repo
+3-done ,just these 2 step netlify do rest!!
+
+site address : https://sadify.netlify.app/
+git repo address : https://github.com/sadeghtavakoli/sadify
