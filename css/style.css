@@ -191,6 +191,7 @@ a {
   margin: 3px;
   cursor: pointer;
   white-space: nowrap;
+  outline: 0;
 }
 .btn--stretched {
   padding-left: 6rem;
